@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#taskInput {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#addTaskBtn {
+    background: #2563eb;
+    color: white;
+}
+
+#loadSamplesBtn {
+    background: #555;
+    color: white;
+}
+
+#taskMessage {
+    color: red;
+    min-height: 20px;
+}
+
+.summary {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.summary div {
+    flex: 1;
+    text-align: center;
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.summary strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.summary span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.task-text {
+    flex: 1;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.complete-btn {
+    background: green;
+    color: white;
+}
+
+.edit-btn {
+    background: orange;
+    color: white;
+}
+
+.remove-btn {
+    background: red;
+    color: white;
+}
+
+.edit-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+
+    .task-item {
+        flex-wrap: wrap;
+    }
+
+    .task-text,
+    .edit-input {
+        flex-basis: 100%;
+    }
+
+    .summary {
+        flex-direction: column;
+    }
+
+}
